@@ -181,6 +181,10 @@ ControlAllocator::update_allocation_method()
 			tmp = new ControlAllocationSimple();
 			break;
 
+		case 1:
+			tmp = new ControlAllocationMultirotor();
+			break;
+
 		default:
 			PX4_ERR("Unknown allocation method");
 			tmp = nullptr;
