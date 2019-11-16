@@ -131,16 +131,14 @@ private:
 	matrix::Vector3f _torque_sp;
 	matrix::Vector3f _thrust_sp;
 
-	float _battery_scale_factor{1.0f};
-	float _airspeed_scale_factor{1.0f};
+	// float _battery_scale_factor{1.0f};
+	// float _airspeed_scale_factor{1.0f};
 
 	perf_counter_t	_loop_perf;			/**< loop duration performance counter */
 
 	hrt_abstime _task_start{hrt_absolute_time()};
 	hrt_abstime _last_run{0};
 	hrt_abstime _timestamp_sample{0};
-	float _dt_accumulator{0.0f};
-	int _loop_counter{0};
 
 	DEFINE_PARAMETERS(
 		(ParamInt<px4::params::CA_AIRFRAME>) _param_ca_airframe,
